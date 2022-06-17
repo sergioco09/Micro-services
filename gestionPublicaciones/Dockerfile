@@ -29,6 +29,6 @@ COPY ssl/OREGON/kafka.client.keystore.jks /opt/ssl/oregon/kafka.client.keystore.
 COPY ssl/OREGON/kafka.client.truststore.jks /opt/ssl/oregon/kafka.client.truststore.jks
 
 
-EXPOSE 8084
+EXPOSE 8085
 
 ENTRYPOINT ["java", "-jar", "/opt/task-service-productor-kafka-0.0.1-SNAPSHOT.jar"]

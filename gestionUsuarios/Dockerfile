@@ -29,6 +29,6 @@ COPY ssl/OREGON/kafka.client.keystore.jks /opt/ssl/oregon/kafka.client.keystore.
 COPY ssl/OREGON/kafka.client.truststore.jks /opt/ssl/oregon/kafka.client.truststore.jks
 
 
-EXPOSE 8081
+EXPOSE 8082
 
 ENTRYPOINT ["java", "-jar", "/opt/gestionUsuarios-0.0.1-SNAPSHOT.jar"]
