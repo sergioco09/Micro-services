@@ -3,6 +3,6 @@ spring:
     name: publicaciones-service
   cloud:
     config:
-      enable: true
+      enabled: true
       uri: http://localhost:8081
 
