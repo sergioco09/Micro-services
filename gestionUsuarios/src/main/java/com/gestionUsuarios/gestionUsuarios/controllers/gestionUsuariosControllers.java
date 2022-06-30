@@ -24,8 +24,8 @@ public class gestionUsuariosControllers {
     @Autowired
     private gestionUsuariosService gestionUsuariosSvc;
 
-    /*@Autowired
-    private gestionUsuariosServiceImpl gestionUsuarios;*/
+    @Autowired
+    private gestionUsuariosServiceImpl gestionUsuarios;
 
 
     @PostMapping(value = "/crearUsuario")
@@ -50,7 +50,7 @@ public class gestionUsuariosControllers {
 
     //crear amigos
 
-    /*@PostMapping(value = "/agregarAmigo")
+    @PostMapping(value = "/agregarAmigo")
     public ResponseEntity<ResponseAmigosDTO> agregaAmigo(@RequestBody CrearAmigosDTO amigoNuevo){
         log.info("Inicia proceso de agregar Amigo");
         return ResponseEntity.ok(gestionUsuarios.agregaAmigo(amigoNuevo));
@@ -65,37 +65,37 @@ public class gestionUsuariosControllers {
     public ResponseEntity<List<ResponseListaAmigosDTO>> consultaAmigos(@PathVariable(required = true) Integer id){
         log.info("Inicia proceso de recuperar mensajes");
         return ResponseEntity.ok(gestionUsuarios.consultaAmigos(id));
-    }*/
+    }
 
     //Crear Mensaje
-    /*@PostMapping(value = "/crearMensaje")
+    @PostMapping(value = "/crearMensaje")
     public ResponseEntity<ResponseMensajeDTO> creaMensajes(@RequestBody CrearMensajeDTO menNuevo){
         log.info("Inicia proceso de envio de mensajes");
         return ResponseEntity.ok(gestionUsuarios.creaMensajes(menNuevo));
-    }*/
-    /*@GetMapping(value = "/consultarMensajes/{id}")
+    }
+    @GetMapping(value = "/consultarMensajes/{id}")
     public ResponseEntity<List<ConsultaMensajesDTO>> consultaMensajes(@PathVariable(required = true) Integer id){
         log.info("Inicia proceso de recuperar mensajes");
         return ResponseEntity.ok(gestionUsuarios.consultaMensajes(id));
-    }*/
+    }
 
     //Notificaciones
-    /*@PostMapping(value = "/creaNotificacion")
+    @PostMapping(value = "/creaNotificacion")
     public ResponseEntity<ResponseCreaNotDTO> creaNotificacion(@RequestBody CrearNotificacionDTO creaNot){
         log.info("Inicia proceso de agregar publicacion");
         return ResponseEntity.ok(gestionUsuarios.creaNotificacion(creaNot));
-    }*/
+    }
 
     //Puclicaciones
-    /*@PostMapping(value = "/crearPublicacion")
+    @PostMapping(value = "/crearPublicacion")
     public ResponseEntity<ResponseAltaPubliDTO> agregaPublicacion(@RequestBody CrearPublicacionDTO pubAlta){
         log.info("Inicia proceso de agregar publicacion");
         return ResponseEntity.ok(gestionUsuarios.agregaPublicacion(pubAlta));
-    }*/
+    }
 
-    /*@PutMapping(value = "/actPublicacion/{id}")
+    @PutMapping(value = "/actPublicacion/{id}")
     public ResponseEntity<ResponseActualizaPubDTO> actPubl(@PathVariable(required = true) int id, @RequestBody CrearPublicacionDTO pubAct){
         log.info("Inicia Actualizaciòn");
        return ResponseEntity.ok(gestionUsuarios.actPubl(id,pubAct));
-    }*/
+    }
 }
