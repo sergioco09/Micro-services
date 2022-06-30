@@ -24,7 +24,7 @@ import java.util.List;
 @Service
 public class gestionUsuariosServiceImpl implements gestionUsuariosService {
 
-    /*@Autowired
+    @Autowired
     AmigosFeignClients AmigosFeignClients;
 
     @Autowired
@@ -34,7 +34,7 @@ public class gestionUsuariosServiceImpl implements gestionUsuariosService {
     NotificacionesFeignClients NotificacionesFeignClients;
 
     @Autowired
-    PublicacionesFeignClients PublicacionesFeignClients;*/
+    PublicacionesFeignClients PublicacionesFeignClients;
 
     private static final Logger log = LoggerFactory.getLogger(gestionUsuariosServiceImpl.class);
 
@@ -110,7 +110,7 @@ public class gestionUsuariosServiceImpl implements gestionUsuariosService {
     }
 
     //public responseConlUsuDTO consultarUsuario(){
-    public     List<responseConlUsuDTO> consultarUsuario(){
+    public List<responseConlUsuDTO> consultarUsuario(){
         ResultSet resultado = null;
         List<responseConlUsuDTO> testList = new ArrayList<>();
 
@@ -142,7 +142,7 @@ public class gestionUsuariosServiceImpl implements gestionUsuariosService {
 
     //Metodos de amigos
 
-    /*public ResponseAmigosDTO agregaAmigo(@RequestBody CrearAmigosDTO obj){
+    public ResponseAmigosDTO agregaAmigo(@RequestBody CrearAmigosDTO obj){
         ResponseAmigosDTO CrearAmigosDTONew = AmigosFeignClients.agregaAmigo(obj);
         return CrearAmigosDTONew;
     }
@@ -155,11 +155,11 @@ public class gestionUsuariosServiceImpl implements gestionUsuariosService {
     public List<ResponseListaAmigosDTO> consultaAmigos(@PathVariable(required = true) Integer id){
         List<ResponseListaAmigosDTO> NewConListaAmigos = AmigosFeignClients.consultaAmigos(id);
         return NewConListaAmigos;
-    }*/
+    }
 
     //Metodos de Mensajes
 
-    /*public ResponseMensajeDTO creaMensajes(@RequestBody CrearMensajeDTO menNuevo){
+    public ResponseMensajeDTO creaMensajes(@RequestBody CrearMensajeDTO menNuevo){
         ResponseMensajeDTO NewResponseMensajeDTO = MensajesFeignClients.creaMensajes(menNuevo);
         return NewResponseMensajeDTO;
     }
@@ -167,18 +167,18 @@ public class gestionUsuariosServiceImpl implements gestionUsuariosService {
     public List<ConsultaMensajesDTO> consultaMensajes(@PathVariable(required = true) Integer id){
         List<ConsultaMensajesDTO> NewListMensajes = MensajesFeignClients.consultaMensajes(id);
         return NewListMensajes;
-    }*/
+    }
 
     //Metodos de notificaciones
 
-    /*public ResponseCreaNotDTO creaNotificacion(@RequestBody CrearNotificacionDTO creaNot){
+    public ResponseCreaNotDTO creaNotificacion(@RequestBody CrearNotificacionDTO creaNot){
         ResponseCreaNotDTO NewResponseCreaNotDTO = NotificacionesFeignClients.creaNotificacion(creaNot);
         return NewResponseCreaNotDTO;
-    }*/
+    }
 
     //Metodos de publicaciones
 
-    /*public ResponseAltaPubliDTO agregaPublicacion(@RequestBody CrearPublicacionDTO pubAlta){
+    public ResponseAltaPubliDTO agregaPublicacion(@RequestBody CrearPublicacionDTO pubAlta){
         ResponseAltaPubliDTO NewResponseAltaPubliDTO = PublicacionesFeignClients.agregaPublicacion(pubAlta);
         return NewResponseAltaPubliDTO;
     }
@@ -186,6 +186,6 @@ public class gestionUsuariosServiceImpl implements gestionUsuariosService {
     public ResponseActualizaPubDTO actPubl(@PathVariable(required = true) int id, @RequestBody CrearPublicacionDTO pubAct){
         ResponseActualizaPubDTO NewResponseActualizaPubDTO = PublicacionesFeignClients.actPubl(id,pubAct);
         return NewResponseActualizaPubDTO;
-    }*/
+    }
 
 }

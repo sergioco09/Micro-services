@@ -3,13 +3,13 @@ package com.gestionUsuarios.gestionUsuarios.FeignClients;
 import com.gestionUsuarios.gestionUsuarios.models.CrearAmigosDTO;
 import com.gestionUsuarios.gestionUsuarios.models.ResponseAmigosDTO;
 import com.gestionUsuarios.gestionUsuarios.models.ResponseListaAmigosDTO;
-//import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-//@FeignClient(name = "amigos-service", url="http://localhost:8082", path = "gestion/amigos/v1")
+@FeignClient(name = "amigos-service", path = "gestion/amigos/v1")
 //@RequestMapping("gestion/amigos/v1")
 public interface AmigosFeignClients {
     @PostMapping(value = "/agregarAmigo")
