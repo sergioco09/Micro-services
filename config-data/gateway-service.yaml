@@ -17,22 +17,22 @@ spring:
      enabled: true
    routes:
     - id: gestionUsuarios
-      url: lb://usuarios-service
+      url: lb://gestionUsuarios
       predicates:
        - Path=/gestion/usuarios/v1/**
     - id: gestionAmigos
-      url: lb://amigos-service
+      url: lb://gestionAmigos
       predicates:
        - Path=/gestion/amigos/v1/**
     - id: gestionMensajes
-      url: lb://mensajes-service
+      url: lb://gestionMensajes
       predicates:
        - Path=/gestion/mensajes/v1/**
     - id: gestionPublicaciones
-      url: lb://publicaciones-service
+      url: lb://gestionPublicaciones
       predicates:
        - Path=/gestion/publicaciones/v1/**
     - id: gestionNotificaciones
-      url: lb://notificaciones-service
+      url: lb://gestionNotificaciones
       predicates:
        - Path=/gestion/notificaciones/v1/**              
