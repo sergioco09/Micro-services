@@ -17,11 +17,11 @@ spring:
      enabled: true
    routes:
     - id: gestionUsuarios
-      url: lb://gestionUsuarios
+      url: lb://usuarios-service
       predicates:
        - Path=/gestion/usuarios/v1/**
     - id: gestionAmigos
-      url: lb://gestionAmigos
+      url: lb://amigos-service
       predicates:
        - Path=/gestion/amigos/v1/**
     - id: gestionMensajes
